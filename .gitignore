@@ -1,0 +1,9 @@
+.ionide
+.paket
+bazel-*
+bin
+obj
+packages
+.paket
+paket-files
+.bazelrc
