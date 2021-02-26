@@ -21,5 +21,6 @@ jobs:
         DOTNET_NOLOGO: true
       run: |
         dotnet tool restore
+        dotnet paket restore
         dotnet build
         dotnet test
