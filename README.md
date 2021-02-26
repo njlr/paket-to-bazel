@@ -1,6 +1,6 @@
 # paket-to-bazel
 
-This is a tool that generates Bazel scripts from Paket files. This helps you maintain a Bazel build alongside a conventional F# build (Paket and .NET CLI).
+This is a tool that generates [Bazel](https://bazel.build/) scripts from Paket files. This helps you maintain a Bazel build alongside a conventional F# build (Paket and .NET CLI).
 
 Why use Bazel? Well, one big pain-point of F# is build times. If you use Bazel, then build times can be significantly reduced, since Bazel caches can be shared across time and space! It also gives you reproducible builds. This is important if you have continuous deployment, because it prevents deployments being updated when they haven't actually changed.
 
@@ -34,6 +34,27 @@ Next, you need to use `nuget2bazel` to update the Bazel scripts:
 
 ```bash
 bazel run @io_bazel_rules_dotnet//tools/nuget2bazel:nuget2bazel.exe -- sync -p $PWD
+```
+
+You can then refer to Nuget packages like this:
+
+```python
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "fsharp_binary")
+
+fsharp_binary(
+  name = "app.exe",
+  srcs = [
+    "Program.fs",
+  ],
+  deps = [
+    "@core_sdk_stdlib//:libraryset",
+    "@fsharp.core//:lib",
+    "@fsharpx.extras//:lib",
+    "@fstoolkit.errorhandling//:lib",
+    "@argu//:lib",
+    "@thoth.json.net//:lib",
+  ],
+)
 ```
 
 What *doesn't* work:
