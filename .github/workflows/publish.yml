@@ -15,7 +15,7 @@ jobs:
         with:
           dotnet-version: 5.0.x
 
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: .NET Build
         run: |
