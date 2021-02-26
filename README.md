@@ -57,7 +57,7 @@ fsharp_binary(
 )
 ```
 
-What *doesn't* work:
+What *doesn't* work yet:
 
  * Using an alternative Nuget source
  * Using more than one Paket group
