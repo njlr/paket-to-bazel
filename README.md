@@ -41,6 +41,7 @@ What *doesn't* work:
  * Using an alternative Nuget source
  * Using more than one Paket group
  * Using Paket Git and GitHub dependencies
+ * Integration with `paket.references` files
 
 ## Development
 
