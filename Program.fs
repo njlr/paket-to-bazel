@@ -1,3 +1,5 @@
+module PaketToBazel
+
 open System
 open System.IO
 open FsToolkit.ErrorHandling

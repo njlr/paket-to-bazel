@@ -3,9 +3,14 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <SelfContained>True</SelfContained>
+    <PublishSingleFile>True</PublishSingleFile>
+    <PublishTrimmed>True</PublishTrimmed>
   </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="Program.fs" />
   </ItemGroup>
+
   <Import Project=".paket\Paket.Restore.targets" />
 </Project>
