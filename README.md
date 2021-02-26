@@ -25,7 +25,7 @@ git_repository(
 Next, you need to run the tool against your lock-file:
 
 ```bash
-bazel run @paket_to_bazel//:paket_to_bazel.exe paket.lock
+bazel run @paket_to_bazel//:paket_to_bazel.exe -- paket.lock
 ```
 
 This will generate a `nuget2config.json` file.
