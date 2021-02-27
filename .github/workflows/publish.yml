@@ -30,3 +30,4 @@ jobs:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: bin/Release/net5.0/linux-x64/publish/paket_to_bazel
           asset_name: paket_to_bazel_linux-x64
+          asset_content_type: application/octet-stream
