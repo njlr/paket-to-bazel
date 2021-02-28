@@ -12,14 +12,10 @@ OK, so how does it work?
 
 First you need a project that uses Paket (such as this very repo!).
 
-Add the tool to your `WORKSPACE` like so:
+Build the tool or fetch it like so: 
 
-```python
-git_repository(
-  name = "paket_to_bazel",
-  remote = "https://github.com/njlr/paket-to-bazel",
-  branch = "master",
-)
+```bash
+wget https://github.com/njlr/paket-to-bazel/releases/download/v0.0.9/paket_to_bazel_linux-x64
 ```
 
 Next, you need to run the tool against your lock-file:
