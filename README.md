@@ -15,7 +15,8 @@ First you need a project that uses Paket (such as this very repo!).
 Build the tool or fetch it like so: 
 
 ```bash
-wget https://github.com/njlr/paket-to-bazel/releases/download/v0.0.9/paket_to_bazel_linux-x64
+wget https://github.com/njlr/paket-to-bazel/releases/download/v0.0.9/paket_to_bazel_linux-x64 -O ./paket_to_bazel
+chmod +x ./paket_to_bazel
 ```
 
 Next, you need to run the tool against your lock-file:
